@@ -6,6 +6,7 @@
             </p>
         </figure>
         <div class="media-content">
+            <%= render 'form' %>
         </div>
     </article>
 
@@ -21,6 +22,7 @@
                     <div class="content">
                         <strong><%= post.user.name %></strong><br />
                         <small><%= post.user.username %></small><br/>
+                        <p><%= post.title %></p>
                         <p><%= post.body %></p>
                     </div>
                 <% if user_signed_in? && current_user.id == post.user_id %>
