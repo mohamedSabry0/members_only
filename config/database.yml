@@ -21,10 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: twitter_clone
-  pool: 5
-  host: localhost
-  username: your_username
-  password: your_database_password
+  <<: *default
+  database: db/production.sqlite3
