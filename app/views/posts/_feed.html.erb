@@ -14,14 +14,18 @@
         <div class="box">
             <article class="media">
                 <div class="media-left">
+                <% if user_signed_in? %>
                     <figure class="image is-64x64">
                         <img src="https://bulma.io/images/placeholders/64x64.png">
                     </figure>
+                    <% end %>
                 </div>
                 <div class="media-content">
                     <div class="content">
+                    <% if user_signed_in? %>
                         <strong><%= post.user.name %></strong><br />
                         <small><%= post.user.username %></small><br/>
+                        <% end %>
                         <p><%= post.title %></p>
                         <p><%= post.body %></p>
                     </div>
