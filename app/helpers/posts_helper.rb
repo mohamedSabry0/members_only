@@ -10,6 +10,5 @@ module PostsHelper
 
   def user_img(signed_in)
     return 'none' unless signed_in
-    
   end
 end
