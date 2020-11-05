@@ -38,22 +38,16 @@
             <p class="control">
               <%= link_to 'New Post', new_post_path, class: "button is-info is-inverted"%>
             </p>
-            <% if user_signed_in? %>
-              <p class="control">
-                <%= link_to current_user.name, edit_user_registration_path, class:"button is-info"%>
-              </p>
-              <p class="control">
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-info"%>
-              </p>
-            <% else %>
-
             <p class="control">
-              <%= link_to 'Sign In', new_user_session_path, class:"button is-info"%>
+              <%= link_to signed_in_layout(user_signed_in?)[0], 
+                          signed_in_layout(user_signed_in?)[1],class:"button is-info"%>
             </p>
             <p class="control">
-              <%= link_to 'Sign Up', new_user_registration_path, class:"button is-info"%>
+              <%= link_to signed_in_layout(user_signed_in?)[2], 
+                          signed_in_layout(user_signed_in?)[3],
+                          method: signed_in_layout(user_signed_in?)[4], class:"button is-info"%>
             </p>
-            <%end%>
+            
           </div>
         </div>
       </div>
