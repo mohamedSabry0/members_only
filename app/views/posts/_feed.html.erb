@@ -8,10 +8,10 @@
     <% @posts.each do |post| %>
         <div class="box">
             <article class="media">
-                <div class="media-left">
+                <div class="media-left <%=user_img(user_signed_in?)%>">
                
                     <figure class="image is-64x64">
-                        <img src=<%=user_img(user_signed_in?)%> >
+                        <img src="https://bulma.io/images/placeholders/64x64.png" >
                     </figure>
                 </div>
                 <div class="media-content">

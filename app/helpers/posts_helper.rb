@@ -9,6 +9,7 @@ module PostsHelper
   end
 
   def user_img(signed_in)
-    'https://bulma.io/images/placeholders/64x64.png' if signed_in
+    return 'none' unless signed_in
+    
   end
 end
