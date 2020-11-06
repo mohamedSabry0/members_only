@@ -1,0 +1,19 @@
+<%= simple_form_for(@post) do |f| %>
+  <%= f.error_notification%>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :title, placeholder: "title", wrapper: false %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :body, placeholder: "Body", input_html: { class: "textarea" }, wrapper: false %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit, class: "button is-info" %>
+  </div>
+<% end %>
